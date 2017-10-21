@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+     
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+
+     
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+   </head>
+
+   <body>
+   
+   <body>
+      <div data-role = "page" id = "fade_page1">
+         <div data-role = "header">
+<div id="flip" >All Books</div>
+            <div id="panel" >
+<ul data-role="listview">
+  <li><a href="php.html">PHP</a></li>
+  <li><a href="java.html">JAVA</a></li>
+  <li><a href="android.html">ANDROID</a></li>
+</ul></div>
+         </div>
+           
+      
+         <div data-role = "main" class = "ui-content">
+           <h2>Php The Basics</h2>
+            <p>Data structures are the way to represent composite entities using regular PHP variables.
+
+Those familiar with database design and database implementation know about the concept of database normalization.
+
+Data structures in PHP represent a similar concept. Whenever dealing with complex concepts and representing them in PHP, data structures are a way to normalize PHP variables to consistently and uniformly represent complex concepts.
+
+PHP Native Structures[edit]
+String is a structure to represent a singular value (aka scalar)
+Array is a structure to represent a list of values (aka vector)
+<br><br>
+Examples[edit]
+<br><br>
+String Example:
+
+ $person_name = 'Alice';</p>
+           
+         </div>
+
+         <div data-role = "footer">
+            <h2> <a href = "#fade_page2" data-transition = "fade">Next</a></h2>
+         </div>
+      </div>
+
+      <div data-role = "page" id = "fade_page2">
+         <div data-role = "header">
+            <h2>PHP Composite Structures</h2>
+         </div>
+
+         <div data-role = "main" class = "ui-content">
+            <p>SimpleDictionary is a structure to represent an unordered sequence of name-value pairs. In native PHP, this is done using the standard Array with strings for indices.
+SimpleSequence is a structure to represent an ordered sequence of values. In native PHP, this is done using the standard Array with numeric indices.
+SimpleTable (aod) is an ordered sequence of one or more SimpleDictionary where each SimpleDictionary instance has matching names.
+SimpleTable (aoa) is a sequence of one or more SimpleSequence where each SimpleSequence instance has corresponding indices.
+The square brackets method allows you to set up by directly setting the values. For example, to make $foobar[1] = $foo, all you need to do is:
+<br><br>
+Examples[edit]<br><br>
+SimpleDictionary Examples:<br><br>
+
+ $person_names = Array( 'person1'=> 'Alice', 'person2'=> 'Bob', 'person3'=> 'Charlie',  );
+ $alice_info   = Array( 'first_name'=> 'Alice', 'sex'=> 'Female', 'age'=> '26', 'email'=> 'alice@example.com',  );</p>
+            
+         </div>
+
+         <div data-role = "footer">
+            <h2><a href = "#fade_page1">Previous</a>
+            <a href = "#fade_page3">Next</a></h2>
+         </div>
+      </div>
+
+      <div data-role = "page" id = "fade_page3">
+         <div data-role = "header">
+            <h2>Example</h2>
+         </div>
+
+         <div data-role = "main" class = "ui-content">
+            <p>SimpleDictionary Examples:<br><br>
+<br>
+$user_profile = Array(<br>
+  main => Array(<br>
+    first_name  => "Archibald",<br>
+    last_name   => "Shaw",<br>
+    sex         => "male",<br>
+    age         => "33",    <br>
+  ),<br>
+  guardian => Array(<br>
+    first_name => "",<br>
+    last_name => "",<br>
+  ),<br>
+  children => Array(<br>
+    0 => Array(<br>
+      first_name => "Sally",<br>
+      last_name => "Shaw",<br>
+    ),<br>
+    1 => Array(<br>
+      first_name => "Scott",<br>
+      last_name => "Shaw",<br>
+    ),<br>
+  ),<br>
+  
+);</p>
+           
+         </div>
+
+         <div data-role = "footer">
+            <h2> <a href = "#fade_page2">Previous</a>
+            <a href = "#fade_page1">First</a></h2>
+         </div>
+      </div>
+      
+   </body>
+</html>
